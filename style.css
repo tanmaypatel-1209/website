@@ -1,0 +1,564 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Ensure images and text are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Text */
+h1, h2, h3, p {
+    text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        font-size: 12px;
+    }
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color:transparent;
+    position: fixed;
+    backdrop-filter:blur(10px);
+}
+#bg img{
+    width: 100%;
+}
+#logo{
+    margin-left: 30px;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+#logo img{
+    
+    height: 120px;
+    
+}
+
+
+.search-container {
+    
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-box {
+    margin-left: 10%;
+    padding: 10px;
+    width: 400px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    outline: none;
+}
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.search-button img{
+    margin-top: 4px;
+    height: 20px;
+}
+#login{
+    margin-left: 170px;
+}
+.button{
+    margin-left: 30px;
+    height: 40px;
+    width: 90px;
+    font-size: 20px;
+    background-color:transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button:hover{
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6); /* Darker shadow */
+    transform: scale(.9);
+    background-color: orange;
+    color: black;
+}
+.button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.button a:hover{
+    color: rgb(0, 0, 0);
+}
+#contentimg{
+    height:300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.food{
+    height: 100px;
+    width: 100px;
+    background-color:black;
+    border-radius: 50%;
+    margin-left: 34px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#f1{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+}
+.food img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.food:hover{
+    box-shadow: 2px 5px 9px rgba(0, 0, 0, 2); /* Darker shadow */
+    transform: scale(.9);
+}
+#main1{
+    height: 15%;
+    width: 100%;
+    display: flex;
+}
+.pizza1{
+    
+    transform: translate(-50%,-50%);
+    margin-top: 200px;
+    margin-left: 15%;
+    height: 42.5vh;
+    width: 46vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    overflow: hidden;
+}
+.pizza{
+    height: 312.5px;
+    width: 250px;
+border-radius: 10px;
+}
+
+.pizza1::before{
+    content: "fhbcvbcv";
+    position: absolute;
+    height: 312.5px;
+    width: 250px;
+   top: -100%;
+   left: 0;
+   transform: translateY(00%);
+   
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.2s ;
+  /*overflow: hidden*/
+}
+
+.pizza1:hover::before{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 20px;
+    height: 90%;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    transform: translateY(100%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.pizza2{
+   
+    transform: translate(-50%,-50%);
+    margin-top: 200px;
+    margin-left:97px;
+    height: 42.5vh;
+    width: 46vh;
+    background-color: rgb(184, 0, 0);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    overflow: hidden;
+}
+.pizza2::before{
+    content: "fhbcvbcv";
+    position: absolute;
+    height: 312.5px;
+    width: 250px;
+   top: -100%;
+   left: 0;
+   transform: translateY(00%);
+   
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.2s ;
+  /*overflow: hidden*/
+}
+.pizza2:hover::before{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 20px;
+    height: 90%;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    transform: translateY(100%);
+    border-radius: 10px;
+    z-index: 1;
+}
+.pizza1::before{
+    position: absolute;
+    
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.2s ;
+    backdrop-filter: blur(10px);
+
+}
+.pizza2::before{
+    position: absolute;
+    
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.2s ;
+    backdrop-filter: blur(10px);
+
+}
+#cont1:hover::before{
+    content: "Delicious Margherita\APrize:399R\AWeight:400g\A with onion,Mozzarella";
+   
+}
+#cont2:hover::before{
+    content: "Pepperoni\APrize:399R\AWeight:400g\ATomato Sauce,Mozzarella,\APepperoni Slices";
+}
+#cont3:hover::before{
+    content: "White Pizza (Pizza Bianca)\APrize:400R\AWeight:400g\Agarlic, olive oil, spinach\APepperoni Slices,\Amushrooms,";
+}
+#cont4:hover::before{
+    content: "Four Cheese (Quattro Formaggi)\APrize:300R\AWeight:400g\Asemi-soft cheese offering a mild,\A nutty flavor,mushrooms,";
+}
+#cont5:hover::before{
+    content: "Classic Cheeseburger\APrize:249R\AIngredients: Beef patty, cheddar cheese,\A lettuce, tomato, onion,\A pickles, ketchup, mustard,\A mayo, sesame seed bun";
+}
+#cont6:hover::before{
+    content: "Veggie Burger\APrize:150R\AIngredients: Plant-based patty \A(made from beans, mushrooms, or soy),\A lettuce, tomato, avocado,\A mayo, whole wheat bun";
+}
+#cont7:hover::before{
+    content: "BBQ Bacon Burger\APrize:179R\AIngredients: Beef patty, smoked bacon,\A BBQ sauce, crispy onions,\A cheddar cheese, brioche bun.";
+}
+#cont8:hover::before{
+    content: " Double Patty Burger\APrize:220R\AIngredients: Two beef patties, \A double cheese, lettuce, tomato,\A special sauce, sesame seed bun.";
+}
+#cont9:hover::before{
+    content: "Delicious Veg Cheese Frenky\APrize:150R\Awith mixed vegetables,\A cheese, and spices";
+}#cont10:hover::before{
+    content: "Delicious Veg Frenky\APrize:70R\Awith vegetables, chutneys, and spices";
+}
+#cont11:hover::before{
+    content: "Delicious Spicy Indie Chatpata Aloo Wrap\APrize:99R\Awith paratha with spiced,\A mashed potatoes (aloo), tangy chutneys, and crunchy veggies";
+}
+#cont12:hover::before{
+    content: "Delicious Veg Paneer Roll\APrize:75R\Awith spiced paneer cubes, \A sautéed vegetables, and chutneys";
+}  
+#cont13:hover::before{
+    content: "Delicious Double Masala Maggi\APrize:80R\Awith Maggi noodles, two packets of Maggi masala.";
+} 
+#cont14:hover::before{
+    content: "Delicious Schezwan Maggi \APrize:90R\Awith Maggi noodles, Schezwan sauce, Maggi masala,\A and optional veggies.";
+} 
+#cont15:hover::before{
+    content: "Delicious Vegetable Maggi\APrize:70R\Awith Maggi noodles, mixed vegetables, Maggi masala.";
+} 
+#cont16:hover::before{
+    content: "Delicious Garlic Cheese Maggi\APrize:120R\Awith Maggi noodles, garlic, butter,\A cheese, Maggi masala.";
+} 
+#cont17:hover::before{
+    content: "Delicious Paneer Pulao\APrize:180R\A with  Basmati rice, veggies, \A cheese, spices, onion, ghee/oil. ";
+} 
+#cont18:hover::before{
+    content: "Delicious Veg. Pulao\APrize:240R\Awith Basmati rice, fruits, nuts,\A spices, saffron, yogurt, ghee/oil.";
+}
+#cont19:hover::before{
+    content: "Delicious Kashmiri Pulav\APrize:272R\Awith Basmati rice, veggies, spices, onion, ghee/oil. ";
+}
+
+#cont20:hover::before{
+    content: "Delicious Special Butter Pulao\APrize:170R\Awith adding spices,vegetables. ";
+} 
+#cont21:hover::before{
+    content: "Delicious Steam Paneer Momos (6 Pcs)\APrize:149R\A with  cottage cheese,spring onion\A and green bell peppers.";
+} 
+#cont22:hover::before{
+    content: "Delicious Fried Veg Momo Bros (6 Pcs)\APrize:160R\Awith  chopped veges , \A[Protein: 8.11g, Carbohydrates: 25.84g, \AFat: 5.31g] ";
+} 
+#cont23:hover::before{
+    content: "Delicious Kurkure Veg Momos (5 Pcs)\APrize:199R\Awith chopped veggies,\Alip-smacking flavou";
+} 
+#cont24:hover::before{
+    content: "Delicious Cheese Momos [6 Nos]\APrize:250R\Awith  Lotus Bistro Lounge's Cheese Momos,\A Filled With Gooey Cheese";
+} 
+#cont25:hover::before{
+    content: "Delicious Tandoori Paneer Pasta\APrize:169R\Awith soft paneer, green capsicum,\A onion and red capsicum (231 Kcal/100g)";
+} 
+#cont26:hover::before{
+    content: "Delicious Red Sauce Penne Pasta\APrize:140R\Awith pasta with veggies";
+} 
+#cont27:hover::before{
+    content: "Delicious Italiano Pasta Veg\APrize:189R\Awith  Onion, capsicum, paneer, mushroom.";
+} 
+#cont28:hover::before{
+    content: "Delicious Spicy Red Schezwan Pasta\APrize:179R\Awith spicy schezwan sauce, \Aalong with green capsicum, onion, red capsicum and paprika ";
+} 
+#cont29:hover::before {
+    content: "Delicious Veg Biryani\APrize:219R\Awith A rice ,spices and a medley of vegetables";
+}
+
+#cont30:hover::before {
+    content: "Delicious Handi Biryani\APrize:200R\Awith ice and assorted veggies\Aflavorful masala seasoned with\A Indian whole spices in a handi.";
+}
+
+#cont31:hover::before {
+    content: "Delicious Dum Biryani With Raita\APrize:419R\Awith long-grain basmati rice and vegetables\Asaffron, whole spices, and garnished \Awith fried onions and fresh coriander";
+}
+
+#cont32:hover::before {
+    content: "Delicious Hyderabadi Biryani\APrize:254R\Awith Rice and assorted veggies cooked in a fragrant \Aand flavorful masala";
+}
+
+#cont33:hover::before {
+    content: "Delicious Masala dosa\APrize:210R\A A flavorful and traditional South Indian delight \Athat combines a crispy crepe \Awith a spiced potato filling. ";
+}
+
+#cont34:hover::before {
+    content: "Delicious Garlic Mysore Dosa\APrize:170R\Awith A delectable blend of flavors\A in a South Indian specialty.";
+}
+
+#cont35:hover::before {
+    content: "Delicious Cheese Frankie Dosa\APrize:259R\A A classic dosa, filled with \Aoozy cheese and flavorful goodness. ";
+}
+
+#cont36:hover::before {
+    content: "Delicious Paneer Tukda Mysore Dosa\APrize:220R\Awith Mysore Dish Made With\A Paneer Cubes & Served With Butter Paper";
+}
+
+#cont37:hover::before {
+    content: "Delicious Vegetable Grilled Sandwich\APrize:135R\Awith  two bread slices containing layers of healthy\A veggies such as onion, tomato, cucumber.";
+}
+
+#cont38:hover::before {
+    content: "Delicious Veg Cheese Sandwich\APrize:95R\Awith sprinkled cheese and chaat masala.";
+}
+
+#cont39:hover::before {
+    content: "Delicious Cheese Samosa Sandwich\APrize:184R\Awith crispy samosa and gooey cheese";
+}
+
+#cont40:hover::before {
+    content: "Delicious OB Paneer Peppery Sandwich\APrize:210R\Awith Tamata, Onion, Capsicum, Faneer Tikknl";
+}
+.site-footer {
+    background-color: #f6eadb;
+    color: #000000;
+    padding: 40px 0 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #f39c12;
+    width: 20px;
+    text-align: center;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+
+.subscribe-form button {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #e67e22;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #bdc3c7;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    background-color: #1a252f;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+.footer-bottom a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Font Awesome icons - using minimal set for footer */
+.fas, .fab {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa-map-marker-alt:before { content: "\f3c5"; }
+.fa-phone:before { content: "\f095"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-facebook:before { content: "\f09a"; }
+.fa-twitter:before { content: "\f099"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-linkedin:before { content: "\f0e1"; }
